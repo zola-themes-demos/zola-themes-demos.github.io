@@ -1,0 +1,157 @@
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="How to use this theme" />
+  <link rel="icon" type="image/svg+xml" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico" />
+  <meta property="og:title" content="Installation and configuration ⋅ Demo course" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Demo course" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;installation&#x2F;" />
+  <meta property="og:description" content="How to use this theme" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Installation and configuration ⋅ Demo course" />
+  <meta name="twitter:description" content="How to use this theme" />
+  <meta name="twitter:url" content="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;installation&#x2F;" />
+  <meta name="twitter:card" content="summary" />
+  
+  <meta property="og:image" content="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;installation&#x2F;illus.avif" />
+  <meta name="twitter:image" content="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;installation&#x2F;illus.avif" />
+  
+  <title>Installation and configuration ⋅ Demo course</title>
+  <link rel="stylesheet" href="/site.css" media="all">
+  
+  <style>
+    * {
+      --primary: #2686d1;
+
+      --accent: #9b68bc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">Demo course</a></h1>
+    <img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico" alt="The Zola logo : a white Z on a black square" style="border: none; width: 50px;" />
+  </header>
+  
+  <section class="illus" style="background-image: url('https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;installation&#x2F;illus.avif')"></section>
+  
+  <main>
+    
+    
+    
+    
+    <a href="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;">Home</a>
+    
+    
+    &mdash;
+    <a href="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;">Guide</a>
+    
+    <h1>Installation and configuration</h1>
+    
+    
+
+
+
+
+    
+
+
+
+    
+    
+        
+        
+        
+            
+        
+            
+                
+            
+        
+    
+
+<p>Create your Zola site, and import this theme:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> init NAME
+</span><span style="color:#96b5b4;">cd</span><span> NAME/themes
+</span><span style="color:#bf616a;">git</span><span> clone https://github.com/elegaanz/zola-theme-course.git
+</span><span style="color:#96b5b4;">cd</span><span> ..
+</span></code></pre>
+<p>Then update your <code>config.toml</code> with this line:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">zola-theme-course</span><span>&quot;
+</span></code></pre>
+<p>You can also add these lines to customize how the theme behaves:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra]
+</span><span style="color:#bf616a;">site_name </span><span>= &quot;</span><span style="color:#a3be8c;">My course</span><span>&quot;
+</span><span style="color:#bf616a;">icon </span><span>= &quot;</span><span style="color:#a3be8c;">image.png</span><span>&quot;
+</span><span style="color:#bf616a;">icon_desc </span><span>= &quot;</span><span style="color:#a3be8c;">Icon of the course</span><span>&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;</span><span style="color:#a3be8c;">A great course!</span><span>&quot;
+</span><span style="color:#bf616a;">default_illus </span><span>= &quot;</span><span style="color:#a3be8c;">illus.png</span><span>&quot;
+</span><span style="color:#bf616a;">primary_color </span><span>= &quot;</span><span style="color:#a3be8c;">#FFFFFF</span><span>&quot;
+</span><span style="color:#bf616a;">accent_color </span><span>= &quot;</span><span style="color:#a3be8c;">#FFFFFF</span><span>&quot;
+</span><span style="color:#bf616a;">source_url </span><span>= &quot;</span><span style="color:#a3be8c;">https://github.com/me/my-course</span><span>&quot;
+</span></code></pre>
+<h2 id="file-structure">File structure</h2>
+<p>For your course to be displayed correctly, it needs to follow a specific structure.</p>
+<ul>
+<li><code>content/_index.md</code> is the text displayed on the homepage</li>
+<li>each part should have its own folder, with an <code>_index.md</code></li>
+<li>each subpart should have its own markdown file (which can be an <code>index.md</code> in a subfolder)</li>
+<li>all <code>_index.md</code> files should have <code>sort_by = &quot;weight&quot;</code> in their frontmatter, and you can then
+order parts and subparts using the <code>weight</code> option.</li>
+</ul>
+<p>With this theme, pages can also have extra options:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra]
+</span><span style="color:#65737e;"># Don&#39;t display the page title, useful for the homepage
+</span><span style="color:#bf616a;">no_title </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#65737e;"># The name of the image to use as a banner
+</span><span style="color:#bf616a;">illus </span><span>= &quot;</span><span style="color:#a3be8c;">illus.jpg</span><span>&quot;
+</span><span style="color:#65737e;"># Adds JSON-LD metadata on this page, useful for the homepage
+</span><span style="color:#bf616a;">jsonld </span><span>= </span><span style="color:#d08770;">true
+</span></code></pre>
+<p>The standard <code>title</code> and <code>description</code> fields are also taken into account.</p>
+
+
+
+    <nav>
+        
+            <a href="https:&#x2F;&#x2F;zola-themes-demos.github.io&#x2F;course&#x2F;guide&#x2F;">⇦ Page précédente</a>
+        
+        
+        
+    </nav>
+
+
+
+    <!-- <% if current_page.data.prev || current_page.data.next %>
+        <nav>
+          <% if current_page.data.prev %>
+            <a href="/<%= current_page.data.prev %>">⇦ Page précédente</a>
+          <% end%>
+          <% if current_page.data.next %>
+            <a href="/<%= current_page.data.next %>">Page suivante ⇨</a>
+          <% end%>
+        </nav>
+        <% end %> -->
+  </main>
+  <footer>
+    <p>Ce cours est <a href="https:&#x2F;&#x2F;github.com&#x2F;me&#x2F;my-course">modifiable par tous</a>.</p>
+    <p>Il est sous licence GPLv3.0.</p>
+  </footer>
+  <script src="/theme.js"></script>
+</body>
+
+</html>
